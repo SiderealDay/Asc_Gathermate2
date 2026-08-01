@@ -318,6 +318,7 @@ function Display:SKILL_LINES_CHANGED()
 			have_prof_skill[sname] = true
 			if skillCache[sname] ~= skillRank then
 				GatherMate.skillRank[sname] = skillRank
+				-- ;; temp fix nil PerformAutoUpdate crash in SKILL_LINES_CHANGED
 				-- GatherMate:PerformAutoUpdate(sname, true)
 			end
 		end
